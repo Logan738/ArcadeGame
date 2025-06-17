@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movement3D;
 
     private Animator animator; // Animator reference
+    private SpriteRenderer spriteRenderer; // SpriteRenderer reference for flipping
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator = GetComponent<Animator>(); // Get the Animator component
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
     }
 
     void Update()
@@ -35,6 +37,12 @@ public class PlayerMovement : MonoBehaviour
         {
             movement2D = new Vector2(moveX, moveY).normalized;
             animator.SetBool("IsRunning", movement2D.sqrMagnitude > 0.01f);
+
+            // Flip sprite based on horizontal movement
+            if (Mathf.Abs(moveX) > 0.01f)
+            {
+                spriteRenderer.flipX = moveX < 0;
+            }
         }
         else
         {

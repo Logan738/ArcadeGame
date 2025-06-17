@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (8)
@@ -359,6 +363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (5)
@@ -22354,6 +22362,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (7)
@@ -22415,6 +22427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (3)
@@ -22476,6 +22492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (1)
@@ -22789,6 +22809,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (2)
@@ -22934,6 +22958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (9)
@@ -41184,6 +41212,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (6)
@@ -41663,6 +41695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137334413456294120, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
+      propertyPath: CollectBread
+      value: 
+      objectReference: {fileID: 1293015040}
     - target: {fileID: 7817186268469749711, guid: a785d90f358a2bc46980e8876b142b8b, type: 3}
       propertyPath: m_Name
       value: BallTemp (4)
@@ -41869,8 +41905,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294961408
+  m_fontColor: {r: 0, g: 0.91391253, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -41893,7 +41929,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 5
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -42396,7 +42432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112816202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1809, y: 3.03, z: 0}
+  m_LocalPosition: {x: 14.45, y: -18.09, z: 0}
   m_LocalScale: {x: 0.13934468, y: 0.14282314, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
