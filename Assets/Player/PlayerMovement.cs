@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement2D;
     private Vector3 movement3D;
 
+    private Animator animator; // Animator reference
+
     void Start()
     {
         if (is2D)
@@ -20,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb3D = GetComponent<Rigidbody>();
         }
+
+        animator = GetComponent<Animator>(); // Get the Animator component
     }
 
     void Update()
@@ -30,10 +34,12 @@ public class PlayerMovement : MonoBehaviour
         if (is2D)
         {
             movement2D = new Vector2(moveX, moveY).normalized;
+            animator.SetBool("IsRunning", movement2D.sqrMagnitude > 0.01f);
         }
         else
         {
             movement3D = new Vector3(moveX, 0, moveY).normalized;
+            animator.SetBool("IsRunning", movement3D.sqrMagnitude > 0.01f);
         }
     }
 
@@ -49,5 +55,3 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
-
-
