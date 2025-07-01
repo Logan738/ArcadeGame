@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.Runtime.InteropServices;
+using UnityEngine.EventSystems;
 
 public class JoyStickMouseControl : MonoBehaviour
 {
-    // Sensitivity multiplier for joystick movement
     public float sensitivity = 10f;
 
-    // Clamp mouse movement to screen bounds
     private int screenWidth;
     private int screenHeight;
 
@@ -31,8 +30,18 @@ public class JoyStickMouseControl : MonoBehaviour
 
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal"); // or "Mouse X" if mapped to joystick
-        float moveY = Input.GetAxis("Vertical");   // or "Mouse Y" if mapped to joystick
+        MoveMouseWithJoystick();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SimulateClick();
+        }
+    }
+
+    void MoveMouseWithJoystick()
+    {
+        float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
 
         if (Mathf.Abs(moveX) > 0.1f || Mathf.Abs(moveY) > 0.1f)
         {
@@ -41,9 +50,35 @@ public class JoyStickMouseControl : MonoBehaviour
             {
                 int newX = Mathf.Clamp(cursorPos.X + (int)(moveX * sensitivity), 0, screenWidth - 1);
                 int newY = Mathf.Clamp(cursorPos.Y - (int)(moveY * sensitivity), 0, screenHeight - 1); // Invert Y
-
                 SetCursorPos(newX, newY);
             }
+        }
+    }
+
+    void SimulateClick()
+    {
+        // Convert screen-space mouse position to world-space ray
+        Vector3 mousePos = Input.mousePosition;
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            // Try to interact with a component
+            hit.collider.gameObject.SendMessage("OnMouseDown", SendMessageOptions.DontRequireReceiver);
+        }
+
+        // Optional: handle UI button clicks
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = mousePos
+        };
+
+        var results = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (var result in results)
+        {
+            ExecuteEvents.Execute(result.gameObject, pointerData, ExecuteEvents.pointerClickHandler);
         }
     }
 }
