@@ -4,6 +4,7 @@ public class ScoreWatcher : MonoBehaviour
 {
     public GameObject Victory; // Optional: assign something in the inspector
     private bool triggered = false;
+    public GameObject ScoreCount;
 
     void Update()
     {
@@ -21,6 +22,8 @@ public class ScoreWatcher : MonoBehaviour
         if (Victory != null)
         {
             Victory.SetActive(true);
+            Time.timeScale = 0f;
+            ScoreCount.SetActive(false);
         }
 
         // You can also:
