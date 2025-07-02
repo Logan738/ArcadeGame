@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2625296946636254224}
   - component: {fileID: 2451504558397121951}
   - component: {fileID: 2859612284033983692}
-  - component: {fileID: 8119130856449400185}
   - component: {fileID: 5088650548441381680}
   - component: {fileID: 8051520363653193235}
   - component: {fileID: 142268978873910}
+  - component: {fileID: 2671372846937712343}
   m_Layer: 0
   m_Name: GreenFishEnemy
   m_TagString: Untagged
@@ -111,20 +111,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
---- !u!114 &8119130856449400185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267768779652570758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d649825b830a0046a7e991fb769536b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 5
 --- !u!111 &5088650548441381680
 Animation:
   m_ObjectHideFlags: 0
@@ -213,3 +199,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2671372846937712343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267768779652570758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af4eea6549c782469fee8100ff4925b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveSpeed: 5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 16
