@@ -22,7 +22,6 @@ public class ScoreWatcher : MonoBehaviour
         if (Victory != null)
         {
             Victory.SetActive(true);
-            Time.timeScale = 0f;
             ScoreCount.SetActive(false);
         }
 

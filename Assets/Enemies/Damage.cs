@@ -11,7 +11,6 @@ public class Damage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameOverUI.SetActive(true);
-            Time.timeScale = 0f;
         }
     }
 }
